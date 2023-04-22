@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборка GULP :: АВРОРА</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230419195436" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230419195436">
+</head>
+    <body>
+        <div class="main_nav">
+    <a href="#" class="active">
+      <i class="fa-solid fa-building-columns"></i>
+    </a>
+    <a href="#" class="">
+      <i class="fa-solid fa-people-group"></i>
+    </a>
+    <a href="#" class="">
+      <i class="fa-solid fa-arrow-up-right-dots"></i>
+    </a>
+</div>
+        <div class="menu">
+  <a href="/" class="logo"><span>FROD CRM</span></a>
+
+  <div class="list">
+    <a href="#">
+      <i class="fa-solid fa-building-columns"></i>
+      <span>партнерки</span>
+    </a>
+    <a href="#">
+      <i class="fa-solid fa-sack-dollar"></i>
+      <span>Офферы</span>
+    </a>
+    <a href="#">
+      <i class="fa-solid fa-file-circle-plus"></i>
+      <span>Аккаунты</span>
+    </a>
+  </div>
+</div>
+        <main>
+            <div class="container">
+    <div class="title">
+        <h2>Партнерские площадки</h2>
+        <span>с которыми вы работаете</span>
+    </div>
+
+    <div class="cardsList">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                <a href="#" class="card addNew" data-modal="#addNewPP">
+                    <div class="content">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                <a href="#" class="card tilt" data-modal="#editPP">
+                    <div class="content">
+                        <span class="name">Rafinad</span>
+                        <span class="link">https://rafinad.io/</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="container">
+    <div class="title">
+        <h2>Офферы</h2>
+        <span>с которыми вы работаете</span>
+    </div>
+
+    <div class="cardsList">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                <a href="#" class="card addNew" data-modal="#addNewOffer">
+                    <div class="content">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                <a href="#" class="card tilt" data-modal="#editPP">
+                    <div class="content">
+                        <div class="price">1333 ₽</div>
+                        <span class="offerName">Альфа Банк - Дебетовая карта Альфа-Карта</span>
+                        <span class="link">Rafinad</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+            ﻿<div class="container">
+    <div class="title">
+        <h2>Аккаунты</h2>
+        <span>Связки логинов и паролей</span>
+    </div>
+
+    <div class="cardsList">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                <a href="#" class="card addNew" data-modal="#addNewAccount">
+                    <div class="content">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xxl-3">
+                <a href="#" class="card tilt" data-modal="#editPP">
+                    <div class="content">
+                      <span class="offerName">89234273199</span>  
+                      <span class="offerName">wdizqdwumj@bugfoo.com</span>
+                      <span class="link">Rafinad Perfluence GB</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+        </main>
+
+        <div id="addNewPP" class="modal">
+  <div class="window">
+    <div class="head">
+      <span>Добавить ПП</span>
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="content">
+      <form action="">
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <span>Название ПП</span>
+            <input type="text" placeholder="Название ПП">
+          </div>
+          <div class="col-12 col-xl-6">
+            <span>Ссылка на ПП</span>
+            <input type="text" placeholder="Ссылка на ПП">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="buttons">
+              <button type="submit">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="editPP" class="modal">
+  <div class="window">
+    <div class="head">
+      <span>Редактировать ПП</span>
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="content">
+      <form action="">
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <span>Название ПП</span>
+            <input type="text" placeholder="Название ПП" value="Rafinad">
+          </div>
+          <div class="col-12 col-xl-6">
+            <span>Ссылка на ПП</span>
+            <input type="text" placeholder="Ссылка на ПП" value="https://rafinad.io/">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="buttons">
+              <button type="submit" class="red">Удалить</button>
+              <button type="submit">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="addNewOffer" class="modal">
+  <div class="window">
+    <div class="head">
+      <span>Добавить оффер</span>
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="content">
+      <form action="">
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <span>ПП оффера</span>
+            <select>
+              <option>Rafind</option>
+              <option>Perfluence</option>
+            </select>
+          </div>
+          <div class="col-12 col-xl-6">
+            <span>Ссылка на оффер</span>
+            <input type="text" placeholder="Ссылка на оффер">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-xl-4">
+            <span>Название оффера</span>
+            <input type="text" placeholder="Название оффера">
+          </div>
+          <div class="col-12 col-xl-4">
+            <span>Лимит конверсий</span>
+            <input type="text" placeholder="Лимит конверсий">
+          </div>
+          <div class="col-12 col-xl-4">
+            <span>Оплата за ц/д</span>
+            <input type="text" placeholder="Выплата за 1 конверсию">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <span>Расходны на 1 конверсию</span>
+            <input type="text" placeholder="Себестоимость 1 конверсии">
+          </div>
+          <div class="col-10 col-xl-4">
+            <span>Начисление воркеру</span>
+            <input type="text" placeholder="Начисление воркеру за 1 конверсию">
+          </div>
+          <div class="col-2">
+            <span>&nbsp;</span>
+            <select>
+              <option selected>руб.</option>
+              <option>%</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="buttons">
+              <button type="submit">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="addNewAccount" class="modal open">
+  <div class="window">
+    <div class="head">
+      <span>Добавить аккаунт</span>
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <div class="content">
+      <form action="">
+        <div class="row">
+          <div class="col-6 col-xl-6">
+            <span>E-mail</span>
+            <input type="text" placeholder="Логин">
+          </div>
+          <div class="col-6 col-xl-6">
+            <span>&nbsp;</span>
+            <input type="text" placeholder="Пароль">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-xl-6">
+            <span>Телефон</span>
+            <input type="text" placeholder="Телефон">
+          </div>
+          <div class="col-6 col-xl-6">
+            <span>Общий пароль</span>
+            <input type="text" placeholder="Пароль">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <span>Себестоимость аккаунта</span>
+            <input type="text" placeholder="Стоимость аккаунта">
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="row">
+          <div class="col-12 col-xl-2">
+            <label>
+              <input type="checkbox">
+              <span>Rafinad</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-4">
+            <input type="text" placeholder="Пароль если отличается от общего">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <span>Альфа Банк - Дебетовая карта Альфа-Карта</span>
+            <input type="text" placeholder="Партнерская ссылка">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <span>Альфа Банк - Дебетовая карта Альфа-Карта</span>
+            <input type="text" placeholder="Партнерская ссылка">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <span>Альфа Банк - Дебетовая карта Альфа-Карта</span>
+            <input type="text" placeholder="Партнерская ссылка">
+          </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="row">
+          <div class="col-12 col-xl-2">
+            <label>
+              <input type="checkbox">
+              <span>Perfluence</span>
+            </label>
+          </div>
+          <div class="col-12 col-xl-4">
+            <input type="text" placeholder="Пароль если отличается от общего">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <span>Альфа Банк - Дебетовая карта Альфа-Карта</span>
+            <input type="text" placeholder="Партнерская ссылка">
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-12">
+            <div class="buttons">
+              <button type="submit">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+        <script src="js/app.min.js?_v=20230419195436"></script>
+    </body>
+</html>

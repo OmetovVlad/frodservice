@@ -1,0 +1,81 @@
+﻿.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($main_color, 0);
+  transition: all $animation_speed;
+  pointer-events: none;
+  .window {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    overflow: hidden;
+    max-height: 95vh;
+    width: calc(100% - 30px);
+    max-width: 900px;
+    opacity: 0;
+    transition: all $animation_speed;
+    .head {
+      background-color: $therd_color;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      span {
+        display: block;
+        padding: 10px 15px 7px;
+        width: calc(100% - 45px);
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: .25em;
+      }
+      .close {
+        padding: 12px 15px;
+        cursor: pointer;
+        i {
+          display: block;
+          font-size: 20px;
+          color: $text_main_color;
+          transform: rotate(0);
+          transition: all $animation_speed;
+        }
+        &:hover {
+          i {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+    .content {
+      padding: 30px 15px 15px;
+      background-color: $secondary_color;
+      max-height: calc(95vh - 44px);
+      overflow: auto;
+      .line {
+        margin: 15px 0;
+        width: 100%;
+        height: 1px;
+        background: $hepl_color;
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: right;
+      & > * + * {
+        margin-left: 15px;
+      }
+    }
+  }
+  &.open {
+    background-color: rgba($main_color, 0.75);
+    pointer-events: auto;
+    .window {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+}

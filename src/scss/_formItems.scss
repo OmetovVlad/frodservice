@@ -1,0 +1,138 @@
+﻿form {
+  .row {
+    & + .row {
+      margin-top: 30px;
+    }
+    & > div {
+      label, input, div {
+        margin-top: 5px;
+      }
+    }
+  }
+  span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+  }
+  input[type=text],
+  input[type=password],
+  select {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 15px;
+    background-color: $therd_color;
+    color: $text_secondary_color;
+    font-family: $main_font;
+    font-size: 14px;
+    line-height: 1;
+  }
+  button,
+  input[type=button],
+  input[type=submit] {
+    display: block;
+    border-radius: 5px;
+    border: 0;
+    padding: 13px 15px 10px;
+    background-color: $focus_color_02;
+    color: $text_main_color;
+    font-family: $main_font;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    transition: all $animation_speed;
+    line-height: 1;
+    &.red {
+      background: $delete_color;
+    }
+    &:hover {
+      color: $icons_color;
+    }
+  }
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    span {
+      display: block;
+      position: relative;
+      line-height: 20px;
+      text-transform: none;
+      margin: 0;
+      padding-left: 30px;
+      white-space: nowrap; /* Текст не переносится */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+      text-overflow: ellipsis; /* Добавляем многоточие */
+      &::before {
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $text_secondary_color;
+        border-radius: 3px;
+        opacity: 0.5;
+        transition: all $animation_speed;
+      }
+      &::after {
+        content: '';
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 10px;
+        height: 10px;
+        background: $text_main_color;
+        border-radius: 3px;
+        opacity: 0;
+        transform: scale(0);
+        transition: all $animation_speed;
+      }
+    }
+    &:hover {
+      span {
+        &::before {
+          opacity: 1;
+        }
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+    input[type=radio],
+    input[type=checkbox] {
+      display: block;
+      width: 0;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      opacity: 0;
+      &:checked + span {
+        &::before {
+          opacity: 1;
+          border-color: $focus_color_02;
+          background: $focus_color_02;
+        }
+        &::after {
+          opacity: 1;
+          background: $icons_color;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
